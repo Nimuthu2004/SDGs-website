@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Opportunities</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        .container {
+        width: 60%;
+        margin-left: 0;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .scrollable-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+        gap: 30px;
+        overflow-y: auto; /* Enable vertical scrolling */
+        max-height: 800px; /* Set a fixed height for the scrollable area */
+        padding: 40px;
+        background-color: #f9f9f9;
+        margin: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);         
+    }
+
+    /* Make sure the container holding scrollable-info has limited height */
+    .scrollable-container {
+        max-height: 900px;
+        overflow-y: auto;
+    }
+
+    /* Styling for individual cards */
+    .card {
+        width: 100%;
+        border-radius: 15px;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+        margin: 15px 0;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+    }
+
+    .card p {
+        font-size: 1rem;
+        color: #666;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .card button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+    }
+    
+    .card button:hover {
+        background-color: #2980b9;
+    }
+
+    /* User Ratings and Reviews Section */
+    .user-ratings {
+        padding: 20px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .rating-summary {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .rating-summary h2 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .rating-summary p {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .reviews-container {
+        flex: 2;
+        display: flex;
+        gap: 20px;
+    }
+
+    .review-card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        width: 100%;
+    }
+
+    .review-card h3 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .review-card p {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .review-card a {
+        color: #3498db;
+        text-decoration: none;
+    }
+
+    .review-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* Review Section with Emojis */
+    .review-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .review-section label {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .emoji-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    .emoji {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .emoji:hover {
+        background: #f0f0f0;
+        transform: scale(1.1);
+    }
+
+    /* Feedback Form */
+    .feedback-form {
+        padding: 20px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feedback-form h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .feedback-form textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+    }
+
+    .feedback-form textarea::placeholder {
+        color: #999;
+    }
+
+    .feedback-form .buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .feedback-form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .feedback-form .submit {
+        background-color: #34db63;
+        color: white;
+    }
+
+    .feedback-form .cancel {
+        background-color: #ccc;
+        color: black;
+    }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted playsinline style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;">
+        <source src="videos/seafish.mp4" type="video/mp4">
+    </video>
+    
+    <header>
+        <img src="images/fish.png" alt="Website Logo" class="logo">
+        <div class="header-text">
+            <h1>14 Life Below Water</h1>
+            <h2>"Conserve and sustainably use the oceans, seas and marine resources for sustainable development"</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="volunteer.html" class="active">Volunteer</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="profile.html">User</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <header style="background-color: #05254e; color: white; padding: 20px; text-align: center;">
+            <h1>Volunteer Opportunities</h1>
+            <div class="right-content">
+                <section class="volunteer-opportunities">
+                    <h2>Volunteer Programs</h2>
+                    <div class="dropdown">
+                        <label for="sort">Sort by:</label>
+                        <select id="sort" name="sort">
+                            <option value="most-popular">Most Popular</option>
+                            <option value="highest-rated">Highest Rated</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                    </div>
+		</section>
+            </div>
+        </header>
+        
+        
+        <main>
+ 
+            
+        
+        	<!-- Volunteer Programs Section -->
+        	<section class="scrollable-info">
+            
+            	<div class="card">
+                <h2>Beach Cleanup Volunteer</h2>
+                <img src="images/BeachCleanup.jpg" alt="Childcare in Arusha">
+                <p>Join local beach cleanups to remove plastic waste and debris from coastlines, protecting marine life and preventing pollution.</p>
+                <p><strong>Duration weeks:</strong> 2-12 weeks</p>
+                <p><strong>Age:</strong> 16+</p>
+                <button>VIEW PROJECT</button>
+                <button>APPLY</button>
+            </div>
+            <div class="card">
+                <h2>Coral Reef Restoration</h2>
+                <img src="images/CoralReef.jpg" alt="Sea Turtle Conservation in Nusa Penida">
+                <p>Assist in coral planting and monitoring reef health to restore damaged coral ecosystems and promote marine biodiversity.</p>
+                <p><strong>Duration weeks:</strong> 1-15 weeks</p>
+                <p><strong>Age:</strong> 18+ (2 weeks)</p>
+                <button>VIEW PROJECT</button>
+                <button>APPLY</button>
+            </div>
+            <div class="card">
+                <h2>Sea Turtle Conservation</h2>
+                <img src="images/SeaTurtle.jpg" alt="Education in Tanzania">
+                <p>Help conserve endangered sea turtles by assisting with feeding, cleaning, and monitoring nesting sites.</p>
+                <p><strong>Duration weeks:</strong> 2-8 weeks</p>
+                <p><strong>Age:</strong> 16+ </p>
+                <button>VIEW PROJECT</button>
+                <button>APPLY</button>
+            </div>
+            <div class="card">
+                <h2>Sustainable Fishing Education</h2>
+                <img src="images/SustainableFishing.jpg" alt="Wildlife Conservation in South Africa">
+                <p>Work with fishing communities to promote sustainable fishing practices and reduce bycatch.</p>
+                <p><strong>Duration weeks:</strong> 4-12 weeks</p>
+                <p><strong>Age:</strong> 18+ </p>
+                <button>VIEW PROJECT</button>
+                <button>APPLY</button>
+            </div>
+        </section>
+
+        <!-- User Ratings and Reviews Section -->
+        <section class="user-ratings">
+            <div class="rating-summary">
+                <h2>9.4/10 Exceptional</h2>
+                <p>100 reviews</p>
+    
+                <button>see more</button>
+            </div>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <h3>10/10 Excellent</h3>
+                    <p>We volunteered in Australia and had an amazing experience.</p>
+                    <a href="#">See more</a>
+                    <p>John Doe - Aug 15, 2018</p>
+                </div>
+                <div class="review-card">
+                    <h3>10/10 Excellent</h3>
+                    <p>Great program, highly recommend it.</p>
+                    <a href="#">See more</a>
+                    <p>Jane Smith - Aug 19, 2018</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Review Section with Emojis -->
+        <section class="review-section">
+            <label for="review">Send us your review</label>
+            <h2>Leave a Review</h2>
+            <textarea id="review" placeholder="Write your review here..."></textarea>
+            <div class="emoji-container">
+                <button class="emoji">😡</button>
+                <button class="emoji">😐</button>
+                <button class="emoji">🙂</button>
+                <button class="emoji">😀</button>
+            </div>
+        </section>
+    
+        <!-- Feedback Form -->
+        <section class="feedback-form">
+            <h2>Got suggestions? We'd love to hear them!</h2>
+            <textarea placeholder="Write your review here..."></textarea>
+            <div class="buttons">
+                <button class="submit">Submit Feedback</button>
+                <button class="cancel">Cancel</button>
+            </div>
+        </section>
+    
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>14 LIFE BELOW WATER</h3>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="home.html">Home</a>
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="table.html">Table</a>
+                    <a href="sitemap.html">Sitemap</a>
+                    <a href="team.html">Team</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="profile.html">User Profile</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Meet Our Team</h3>
+                    <a href="pageEditor_ST1.html">Student 1</a>
+                    <a href="pageEditor_ST2.html">Student 2</a>
+                    <a href="pageEditor_ST3.html">Student 3</a>
+                    <a href="pageEditor_ST4.html">Student 4</a>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

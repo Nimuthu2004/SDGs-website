@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Importance of Marine Conservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .slide {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 90%;
+            padding: 40px;
+            margin: 20px;
+        }
+
+        .slide h1 {
+            font-size: 2rem;
+            color: #05254e;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: #05254e;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+        .card img {
+            width: 60%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block; /* Ensures the image is treated as a block element */
+            margin-left: auto; /* Centers the image horizontally */
+            margin-right: auto;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+    .slide {
+        padding: 20px;
+    }
+
+    .slide h1 {
+        font-size: 1.8rem;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card img {
+        width: 70%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Main Topic -->
+        <h1>The Importance of Marine Conservation</h1>
+        
+        <p>The ocean covers three-quarters of the Earth’s surface and feeds about half of the world’s population, as well as being home for millions of animal species – hundreds of thousands of which have yet to be found! The ocean also functions as a life-support system for our “blue planet”, regulating the climate on a global scale and producing over half of the oxygen we breathe.</p>
+        <p>Two key points are quoted below.</p>
+        <!-- Two Subtopic Cards (Stacked Vertically) -->
+        <div class="cards">
+            <!-- Card 1: Why Oceans and Marine Life are Crucial -->
+            <div class="card">
+                <h2>Why Oceans and Marine Life are Crucial for planet.</h2>
+                <img src="images/fish2.jpg" alt="A vast ocean view">
+                <p>
+                    What Is Marine Life?
+                    Marine ecosystems are home to a myriad of organisms, from colossal whales to tiny plankton, each playing an integral role in the food chain. Coral reefs, often referred to as the rainforests of the sea, provide habitat and food for a vast array of species. The loss of even one species can disrupt the balance, leading to a ripple effect that could ultimately result in the collapse of entire ecosystems.</p>
+                <p>The oceans provide 50 percent of the world’s oxygen and they provide essential ecosystem services that allow our planet to function in a healthy way. For example, ocean currents govern our weather systems, and if they were to be interrupted, the extreme weather consequences would be drastic. The oceans can only provide these services by maintaining delicately balanced ecosystems, made up of food chains and biological systems.</p>
+            </div>
+
+            <!-- Card 2: Role of Oceans in Climate, Biodiversity, and Livelihoods -->
+            <div class="card">
+                <h2>Role of Oceans in Climate, Biodiversity, and human Livelihoods</h2>
+                <img src="images/ship.jpg" alt="A vast ocean view">
+                <p>
+                    The ocean is intrinsically linked to the biodiversity and enrichment of its marine life and ecosystems. As a result, the ocean and coastal areas are extremely vulnerable to a variety of environmental and anthropogenic phenomena [FAO, 2020; IPCC, 2019; UNEP, 2021]. From the impacts of climate change to plastic pollution and overfishing, there are many unprecedented threats looming over our ocean that are linked to anthropogenic activities.
+                </p>
+                <p>Climate change has already had a significant impact on ocean and marine ecosystems. In addition to sea levels rising and increases in the frequency and intensity of extreme weather events, ocean warming and ocean acidification have disrupted the chemistry of the ocean’s water and resulted in the destruction of coral reefs as well as the active depletion of the abundance and distribution of marine life in coastal areas, in the open ocean and at the sea floor [IPCC, 2019].</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

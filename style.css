@@ -1,0 +1,107 @@
+/* Global Styles */
+
+body {
+    background-color: #eef5f9;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #064089 ;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h2 {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #79d8f4;
+    color: #064089;
+}
+
+nav ul li a.active {
+    background-color: #07326A;
+}
+
+/* Card Section */
+.content-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+
+
+/* Footer */
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #064089;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-column h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    display: block;
+    text-decoration: none;
+    color: #d1e7ff;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}

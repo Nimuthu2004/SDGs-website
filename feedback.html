@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color:white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 70%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #1b0202;
+            border-radius: 4px;
+            background-color: white;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .required {
+            color: red;
+            text-align: center;
+
+        }
+        .name{
+            margin-left: 20px;
+        }
+        .name1{
+            margin-left: 21px;
+        }
+        .address{
+            margin-left: 20px;
+        }
+        .address1{
+            width: 95%;
+            margin-left: 20px;
+            background-color: white;
+        }
+        .scroll{
+            width: 30%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #1b0202;
+            border-radius: 4px;
+        }
+        .check1{
+            margin-left: 130px;
+        }
+        .upload{
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+        .check2{
+            margin-left: 130px;
+            margin-bottom: 10px;
+        }
+        .gender{
+            margin-left: 200px;
+        }
+        .gender1{
+            width: 90px;
+            height: 30px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #1b0202;
+            border-radius: 4px;
+        }
+        .radio1{
+            margin-left: 180px;
+        }
+        .radio2{
+            margin-left: 210px;
+        }
+        .radio3{
+            margin-left: 110px;
+        }
+        .request{
+            margin-left: 20px;
+        }
+        .request1{
+            width: 90%;
+            margin-left: 20px;
+            background-color: white;
+        }
+        .comment{
+            margin-left: 20px;
+        }
+        .comment1{
+            width: 90%;
+            margin-left: 20px;
+            background-color: white;
+        }
+        .satisfaction-scale {
+            margin-bottom: 20px;
+        }
+        .scale-numbers {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .scale-numbers span {
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .scale-indicators {
+            display: flex;
+            justify-content: space-between;
+        }
+        .scale-indicators input[type="radio"] {
+            display: none;
+        }
+        .scale-indicators label {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .scale-indicators input[type="radio"]:checked + label {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%;
+            margin-left: 200px;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Error Styling */
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        .error-input {
+            border-color: red;
+        }
+
+        .rating {
+            display: flex;
+            gap: 10px;
+            font-size: 2rem;
+            cursor: pointer;
+            user-select: none;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            transition: transform 0.2s, opacity 0.2s;
+            opacity: 0.6;
+        }
+
+        .star:hover {
+            transform: scale(1.3);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted playsinline style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;">
+        <source src="videos/seafish2.mp4" type="video/mp4">
+    </video>
+
+
+    <header>
+        <img src="images/fish.png" alt="Website Logo" class="logo">
+        <div class="header-text">
+            <h1>14 Life Below Water</h1>
+            <h2>"Conserve and sustainably use the oceans, seas and marine resources for sustainable development"</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+                <li><a href="profile.html">User</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form>
+        <h2 style=" color: #4CAF50;">Feedback Form</h2>
+        <p class="required"><span>*</span> Required fields</p>
+
+        <div class="form-group">
+            <label for="name" class="name"><span class="required">*</span>Enter your name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter name here">
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="name"><span class="required">*</span>Enter your email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter email here">
+        </div>
+
+        <div class="form-group">
+            <label for="tel" class="name"><span class="required">*</span>Enter your tel:</label>
+            <input type="text" id="tel" name="tel" required placeholder="Enter tel here" class="name1">
+        </div>
+
+        <label for="address" class="address"><span class="required">*</span>Enter your address :</label>
+        <textarea id="address" name="address" class="address1" rows="5" placeholder="Add your address here..." ></textarea>
+
+        <div class="form-group">
+            <label for="dropdown" class="gender">Gender:</label>
+            <select id="dropdown" class="gender1">
+            <option value="option1">Male</option>
+            <option value="option2">Female</option>
+            <option value="option3">Other</option>
+            </select>
+        </div>
+
+        
+        <p class="radio1">Was this your first time visiting?</p>
+        <div class="form-group">
+            <label>
+                <input type="radio" class="radio2" name="firstTime" value="yes" required> Yes
+            </label>
+            <label>
+                <input type="radio" name="firstTime" value="no"> No
+            </label>
+        </div>
+
+        <p class="radio3">Was this website informative and easy to navigate through</p>
+        <div class="form-group">
+            <label>
+                <input type="radio" class="radio2" name="firstTime" value="yes" required> Yes
+            </label>
+            <label>
+                <input type="radio" name="firstTime" value="no"> No
+            </label>
+        </div>
+        
+        <label for="comment" class="name">If you have a comment, leave it here:</label>
+<textarea id="comment"></textarea>
+
+        
+        <div class="form-group">
+        <label for="scrolling-list" class="name">How satisfied with our services:</label>
+            <select id="scrolling-list" size="2" class="scroll">
+                <option value="1">Not</option>
+                <option value="2">Satisfied</option>
+                <option value="3">Extremely Satisfied</option>
+            </select>
+        </div>
+
+            <label for="checkbox" class="check1">Would you like to get more information:</label>
+<div class="form-group">
+    <input type="checkbox" id="checkbox" name="more_info">
+</div>
+
+                <label class="check1"><input type="checkbox" name="option1" value="option1">yes,via email</label>
+                <label><input type="checkbox" name="option2" value="option2"> yes,sms</label>
+                <label><input type="checkbox" name="option3" value="option3">none</label>
+            
+    
+        <div class="form-group">
+            <label for="date" class="check1">Preferred Date & Time:</label>
+            <input type="datetime-local" id="date" name="date">
+        </div>
+
+        
+        <label for="fileUpload" class="name">Upload other documents:</label>
+        <input type="file" id="fileUpload" name="fileUpload" class="upload">
+
+        <label for="request" class="request"><span class="required">*</span>Do you have additional Questions or Request ?</label>
+        <textarea id="request" name="request" class="request1" rows="5"  placeholder="Add your message here..."></textarea>
+        
+
+        <label class="name">Rate your experience:</label>
+        <div class="rating">
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+        </div>
+
+        <button type="submit">Submit</button>
+        </form>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>14 LIFE BELOW WATER</h3>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="home.html">Home</a>
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="table.html">Table</a>
+                    <a href="sitemap.html">Sitemap</a>
+                    <a href="team.html">Team</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="profile.html">User Profile</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Meet Our Team</h3>
+                    <a href="pageEditor_ST1.html">Student 1</a>
+                    <a href="pageEditor_ST2.html">Student 2</a>
+                    <a href="pageEditor_ST3.html">Student 3</a>
+                    <a href="pageEditor_ST4.html">Student 4</a>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

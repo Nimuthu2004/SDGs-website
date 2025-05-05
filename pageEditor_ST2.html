@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="pageEditor_validator.css">
+
+<style>
+        
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Header Styles */
+    header {
+        background-color: #064089 ;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    h1 {
+        color: white;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    h2 {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    /* Navigation Bar */
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+        background-color: #79d8f4;
+        color: #064089;
+    }
+
+    nav ul li a.active {
+        background-color: #07326A;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    main {
+        flex: 3;
+    }
+    aside {
+        flex: 1;
+        background-color: #f4f4f4;
+        padding: 15px;
+        border: 1px solid #ddd;
+        margin-right: 20px;
+    }
+    section {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        background-color: #fafafa;
+    }
+
+    .ref li{
+        list-style: none;
+        padding-bottom: 9px;
+    }
+
+    aside a{
+        text-decoration : none;
+    }
+
+    aside li{
+        padding-bottom: 4px;
+    }
+
+    .stud {
+        text-align: center;
+        line-height: 0;
+        background-color: #2e53a3ef;
+        color: white;
+        margin-top: 8px;
+    }
+
+    .top {
+        position: fixed;
+        bottom: 5%;
+        right: 5%;
+    }
+            
+    .top a {
+        padding: 10px 20px; /* Adds padding for button-like feel */
+        background-color: #007bff; /* Button color */
+        color: white; /* Text color */
+        text-decoration: none; /* Removes underline */
+        border-radius: 20px; /* Rounds the corners */
+        font-size: 12px; /* Adjust font size */
+        font-weight: bold; /* Make the text stand out */
+    }
+
+    .top a:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    }
+
+    img{
+        width: 90%;
+    }
+    /* Footer */
+    .footer {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #064089;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .footer-column h3 {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .footer-column a {
+        display: block;
+        text-decoration: none;
+        color: #d1e7ff;
+        font-size: 14px;
+    }
+
+    .footer-column a:hover {
+        text-decoration: underline;
+    }
+
+    </style>
+   
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header>
+        <img src="images/fish.png" alt="Website Logo" class="logo">
+        <div class="header-text">
+            <h1>14 Life Below Water</h1>
+            <h2>"Conserve and sustainably use the oceans, seas and marine resources for sustainable development"</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="profile.html">User</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="stud">
+        <h2>Nimuthu Lakdina, Student 2</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="homepage" style="color: black; font-size: 30px;">Home page</h2>
+                    <h3>Technical Description</h3>
+                        <p>
+                            The home.html page is structured with a &lt;header&gt;, &lt;main&gt;, and &lt;footer&gt;, using semantic HTML for clarity.
+                                 The &lt;main&gt; section features a mission statement and a grid of cards created with Flexbox,
+                                     each linking to different content pages. 
+                                     CSS is used to style the cards with hover effects, shadows, and transitions, enhancing interactivity. 
+                                     Key tags include &lt;header&gt;, &lt;section&gt;, and &lt;div&gt;, while key CSS properties like display: flex; and box-shadow ensure a responsive and visually appealing layout.
+                        </p> 
+                    
+                    <h3>Accessibility</h3>
+                        <p>
+                            Accessibility is addressed through semantic HTML, alt attributes for images, and a muted video background to avoid disrupting screen readers.
+                             The page also uses proper heading hierarchy (&lt;h1&gt;, &lt;h2&gt;) for better navigation. 
+                                However, visible focus states for keyboard users could further improve accessibility.
+                        </p>
+                    
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST2.html#splashVal">stud2 - validation/content</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                    <h3>Link to the page</h3>
+                        <p><a href="home.html">stud2 - home page</a></p>
+            </section>
+
+            <section>
+                <h2 id="tablepage" style="color: black; font-size: 30px;">Table page</h2>
+                    <h3>Technical Description</h3>
+                        <p>
+                            The table.html page uses a &lt;table&gt; to display marine conservation data, with rows and columns styled using CSS.
+                                 The .styled-table class adds rounded corners, shadows, and alternating row colors for readability.
+                                  Hover effects on table rows and images enhance interactivity. Key tags include &lt;table&gt;, &lt;th&gt;, and &lt;td&gt;,
+                                     while key CSS properties like border-collapse and transition ensure a polished design.
+                        </p> 
+
+                    <h3>Accessibility</h3>
+                        <p>
+                            Accessibility is addressed through proper table structure with &lt;th&gt; for headers and &lt;td&gt; for data, alt text for images, 
+                                and descriptive links. However, visible focus states for keyboard users and ARIA labels for interactive elements could further improve accessibility.
+                        </p>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST2.html#volunteerVal">stud2 - validation/table</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="table.html">stud2 - table page</a></p>
+            </section>
+
+            <section>
+                <h2 id="content" style="color: black; font-size: 30px;">Content Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>
+                            The content_ST2.html page organizes content into sections using &lt;div&gt; elements with the class .section.
+                                 Each section contains a heading, image, and paragraph, styled with CSS for a clean, modern look. 
+                                 The .container class centers the content and adds a semi-transparent background with rounded corners and shadows. 
+                                 Images have a hover effect that scales them slightly, adding interactivity. Key tags include &lt;h1&gt;, &lt;h2&gt;, and &lt;p&gt;, while key CSS properties like border-radius and box-shadow enhance the design.
+
+
+                        </p> 
+
+                    <h3>Accessibility</h3>
+                        <p>Accessibility is improved through proper contrast between text and background, alt text for images, and a logical heading hierarchy. 
+                            However, the page could benefit from visible focus states for interactive elements to better support keyboard navigation.</p>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST2.html#contentVal">stud2 - validation/content</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="content.html#cont2">stud2 - content page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge" style="color: black; font-size: 30px;"> Challenges and Lessons Learned</h2>
+                    <p>
+                        Balancing design, performance, and accessibility was the main challenge. 
+                        Issues like video background optimization (home.html), readability with semi-transparent backgrounds (content_ST2.html), and responsive tables (table.html) were resolved through testing and best practices.
+                         The lesson was that thorough testing and semantic HTML are key.
+                    </p> 
+            </section>
+
+            <section>
+                <h2 id="compliance" style="color: black; font-size: 30px;"> Compliance</h2>
+                    <p>
+                        All pages comply with Janet regulations using semantic HTML, accessibility features 
+                        (e.g., alt text, proper contrast), and responsive design.
+                         Multimedia is non-disruptive, meeting accessibility standards.
+                    </p> 
+
+                    
+            </section>
+
+            <section>
+                <h2 id="ref" style="color: black; font-size: 30px;">References</h2>
+                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                    <ul class="ref" >
+                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
+                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li>Student 2</li>
+                    <ul>
+                        <li><a href="#homepage">Home page </a></li>
+                        <li><a href="#tablepage">Table page</a></li>
+                        <li><a href="#content">Content page</a></li>
+                    </ul>
+                
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>14 LIFE BELOW WATER</h3>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="home.html">Home</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="table.html">Table</a>
+                <a href="sitemap.html">Sitemap</a>
+                <a href="team.html">Team</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="profile.html">User Profile</a>
+            </div>
+            <div class="footer-column">
+                <h3>Meet Our Team</h3>
+                <a href="pageEditor_ST1.html">Student 1</a>
+                <a href="pageEditor_ST2.html">Student 2</a>
+                <a href="pageEditor_ST3.html">Student 3</a>
+                <a href="pageEditor_ST4.html">Student 4</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

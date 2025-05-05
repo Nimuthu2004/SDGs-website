@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="4; url=home.html">
+    <!-- Redirect to Home Page after 4 seconds -->
+    <meta http-equiv="refresh" content="4;url=home.html">
+    <title>Splash Screen</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Splash Screen Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('images/fish1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* Overlay for better readability */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .splash-content {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            text-align: center;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .group-members-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .group-members p {
+            margin: 5px 0;
+        }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 15px;
+            transition: background 0.4s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #e68900;
+        }
+
+        /* Animated Loader */
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid #ff9800;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="splash-content">
+        <h1>14 Life Below Water</h1>
+        <p>"Conserve and sustainably use the oceans, seas and marine resources for sustainable development"</p>
+
+        <div class="group-members-container">
+            <div class="group-members">
+                <p>Group Members:</p>
+                <p>Sasindu Anjula</p>
+                <p>Nimuthu Lakdina</p>
+                <p>Wathmi Kodippili</p>
+                <p>Dasuni Navodya</p>
+            </div>
+        </div>
+
+        <button class="button" onclick="window.location.href='pageEditor_ST1.html'">Page Editor</button>
+
+        <div class="loader"></div>
+    </div>
+</body>
+
+</html>
